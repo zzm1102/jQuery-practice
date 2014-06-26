@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<link rel="stylesheet" type="text/css" href="day.css">
+  	<title>experiment</title>
+  </head>
+
+  <body>
+  	<h1>My first website</h1>
+  	<button data-file="day">Day</button>
+  	<button data-file="night">Night</button>
+
+  	<script src="../jquery-2.1.1.js"></script>
+  	<script>
+  	// (function() {
+  	// 	$('button').click(function() {
+  	// 		var change=$(this).text().toLowerCase();
+  	// 	    console.log(change);
+  	// 		$('link').attr('href',change+'.css');
+  	// 	});
+  	// })();
+
+      (function() {
+      	
+      	$('button').on('click',function() {
+          var link = $('link');
+      		var $this = $(this),
+          		change = $this.data('file');
+      		link.attr('href',change+'.css');
+
+      		$this
+	      		.siblings('button')
+		      		.removeAttr('disabled')
+		      		.end()
+		      		.attr('disabled','disabled');
+      	});
+      })();
+
+        // (function() {
+        //   $('button').on('click',function() {
+        //     var change = $(this).data('file');
+        //     $('link').attr('href',change+'.css');
+        //     $(this)
+        //     .attr('disabled','disabled')
+        //     .siblings('button').removeAttr('disabled');
+        //   });
+        // })();
+  	</script>
+
+  </body>
+</html>

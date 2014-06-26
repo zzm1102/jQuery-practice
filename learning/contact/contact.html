@@ -1,0 +1,80 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="contact.css">
+	<script src="../jquery-2.1.1.js"></script>
+</head>
+<body>
+	<article>
+		<h1>My Awesome Post</h1>
+	<p>
+		Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hello from JavaScript. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+	<p>
+		Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hello from JavaScript. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+	</article>
+	
+
+	<div class="contact">
+		<h2>Contact Me</h2>
+		<form action="#">
+			<label>
+			Name:
+			<input type="text" name="name">
+			</label>
+
+			<label>
+				E-mail:
+				<input type="text" name="e-mail" placeholder="name@domain.com">
+			</label>
+
+			<label>
+				What's up:
+				<textarea cols=30 rows=10></textarea>
+			</label>
+		</form>
+		<input type="submit" name="submit" value="submit">
+	</div>
+	
+
+	<script>
+	(function() {
+		$('html').addClass('js');
+		var contactForm = {
+			container: $('.contact'),
+			init: function() {
+				$('<button></button>',{
+					text:'Contact me'
+				}).insertAfter('article:first')
+				.on('click',this.show);
+			},
+
+			show: function() {
+				var cf = contactForm,
+				    container = cf.container;
+				if ( container.is(':hidden') ) {
+					contactForm.close.call(container);
+				    $('.contact').slideToggle(300);
+				}
+			},
+
+			close: function() {
+
+				if ( contactForm.container.find('span.close').length ) return;
+
+				$('<span class=close>X</span>')
+				.prependTo(this)
+				.on('click',function(){
+					contactForm.container.slideToggle(300);
+				});
+			}
+		};
+
+		contactForm.init()
+	})();
+
+	</script>
+</body>
+</html>

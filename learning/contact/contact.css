@@ -1,0 +1,50 @@
+body {
+	font-family: arial;
+	width: 40%;
+	margin: auto;
+	margin-top: 40px;
+	line-height: 25px;
+	position: relative;
+}
+
+form input,textarea {
+	display: block;
+	font-weight: bold;
+	width: 80%;
+}
+
+.contact {
+	width: 100%;
+	background: #e3e3e3;
+	line-height: 35px;
+	padding-bottom: 20px;
+}
+
+.js .contact {
+	position: absolute;
+	top: 0;
+	display: none;
+}
+
+.contact h2 {
+	padding-top: 20px;
+	margin-left: 40px;
+	margin-bottom: 0;
+}
+
+.contact label,input,textarea {
+	margin-left: 40px;
+}
+
+/*
+********************
+* close button
+********************
+*/
+.close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}

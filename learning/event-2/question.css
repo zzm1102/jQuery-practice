@@ -1,0 +1,37 @@
+dd {
+	margin: 0;
+	padding: 1em 0;
+}
+
+dt {
+	cursor: pointer;
+	background: #e3e3e3;
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 2em;
+	border-bottom: 1px solid #c5c5c5;
+	border-top: 1px solid white;
+	border-radius: 5px;
+}
+
+body {
+	width: 500px;
+	margin: auto;
+	text-align: center;
+}
+
+.hide {
+	display: none;
+}
+
+h2 {
+	margin: 20px auto;
+}
+
+h2:first-child {
+	padding-top: 80px;
+}
+
+h2:last-child {
+	padding-bottom: 200px;
+}

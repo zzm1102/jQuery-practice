@@ -1,0 +1,71 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>question</title>
+	<link rel="stylesheet" href="question.css">
+	<script src="../jquery-2.1.1.js"></script>
+</head>
+<body>
+	<dl>
+		<dt>What's your favourite color?</dt>
+		<dd>Black,undoubtedly.</dd>
+		<dt>What's your favourite color?</dt>
+		<dd>Black,undoubtedly.</dd>
+		<dt>What's your favourite color?</dt>
+		<dd>Black,undoubtedly.</dd>
+		<dt>What's your favourite color?</dt>
+		<dd>Black,undoubtedly.</dd>
+		<dt>What's your favourite color?</dt>
+		<dd>Black,undoubtedly.</dd>
+	</dl>
+
+
+	<div class="click">
+		<h2>Click me</h2>
+		<h2>Click me</h2>
+		<h2>Click me</h2>
+		<h2>Click me</h2>
+	</div>
+
+	<script>
+
+	// (function() {
+
+	// 	var dd = $('dd');
+
+	// 	dd.filter(':nth-child(n+4)').addClass('hide');
+
+	// 	$('dt').on('mouseenter', function() {
+	// 		$(this)
+	// 			.next()
+	// 				.slideDown(200)
+	// 				.siblings('dd')
+	// 					.slideUp(200);
+	// 	});
+	// })();
+
+	(function(){
+		var dd = $('dd');
+
+		dd.filter(':nth-child(n+4)').addClass('hide');
+		$('dl').on('mouseenter',"dt",function() {
+			$(this)
+				.next()
+					.slideDown(200)
+					.siblings('dd')
+						.slideUp(200);
+		});
+	})();
+
+
+	(function() {
+		$('h2').on('click',function() {
+			$(this).clone(true).appendTo('.click');
+		});
+	})();
+
+
+	</script>
+
+</body>
+</html>
