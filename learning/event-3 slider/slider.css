@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 600px;
+	margin: 100px auto 0;
+}
+
+.slider {
+	width: inherit;
+	height: 337px;
+	overflow: hidden;
+}
+
+.slider ul {
+	width: 10000px;
+	list-style: none;
+}
+
+.slider li {
+	float: left;
+}
+
+#slider_nav {
+	display: none;
+	margin: 1em;
+	text-align: center;
+}
+
+#slider_nav button {
+	padding: 1em;
+	margin-right: 1em;
+	border-radius: 10px;
+	cursor: pointer;
+}
