@@ -19,9 +19,7 @@ body {
 	list-style: none;
 }
 
-.slider li {
-	float: left;
-}
+.slider li { float: left; }
 
 #slider_nav {
 	display: none;

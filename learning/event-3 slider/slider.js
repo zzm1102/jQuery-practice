@@ -1,42 +1,25 @@
-(function($) {
-	  var sliderUL = $('div.slider').children('ul'),
-		  imgs = sliderUL.find('img'),
-		  imgWidth = imgs[0].width, //  600
-		  imgsLen = imgs.length,  //  5
-		  current = 1,
-		  totalWidth = imgWidth * imgsLen;  // 3000
+var Slider = function( container,nav ) {
+	this.container = container;
+	this.nav = nav;
 
-	  $('#slider_nav').show().find('button').on('click',function() {
-	  	  var direction = $(this).data('dir'),
-	  	  loc = imgWidth;
+	this.imgs = this.container.find('img');
+	this.imgWidth = this.imgs[0].width;  //600
+	this.imgsLen = this.imgs.length;  //5
+	this.current = 0;
+};
 
+Slider.prototype.transition = function( coord ) {
+	this.container.animate({
+		'margin-left': coord || -(this.imgWidth * this.current)  
+	});
+};
 
-		// decide whether it's the first / last img. if beyond ?
-	  	  (direction === 'next') ? ++current: --current;
+Slider.prototype.setCurrent = function(dir) {
+	var pos = this.current;
+	pos += (~~ ( dir === 'next' )  || -1 );
+	this.current = ( pos < 0) ? ( this.imgsLen - 1 ): pos % this.imgsLen;
 
-	  	  if( current === 0 ) {
-	  	  	current = imgsLen,
-	  	  	loc = totalWidth - imgWidth,
-	  	  	direction = 'next';
-	  	  } else if ( current - 1 === imgsLen ) {
-	  	  	current = 1,
-	  	  	loc = 0;
-	  	  }
+	return pos;
+};
+	
 
-	  	  transition(sliderUL, loc, direction);
-	  });
-
-	  function transition(sliderUL, loc, direction) {
-	  	  var plus_minus;
-
-		// decide the transition's direction
-	  	  if( loc !== 0 ) {
-	  	  	plus_minus = ( direction === 'next' ) ? '-=': '+=';
-	  	  }
-
-	  	  sliderUL.animate({
-	  	  	'margin-left': plus_minus ? (plus_minus + loc): loc
-	  	  });
-	  };
-
-})(jQuery);
