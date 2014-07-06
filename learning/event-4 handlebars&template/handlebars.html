@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Handlebars</title>
+	<style>
+		* { font-family: arial; }
+		h1 { margin: .7em 1em; padding: .7em 1em; border: 5px solid #c3c3c3;  border-radius: 15px; text-align: center; font-size: 3em; color: #c3c3c3; text-shadow: 2px 2px 1px #a0a0a0;}
+		img { float: right; margin: 5em 8em 0;  }
+		h2 span { color: #c3c3c3; font-size: .8em; }
+		img.user { float: left; margin: 0 1em; }
+		li.inform { margin: 5em 9em;}
+	</style>
+</head>
+<body>
+	<h1>Information of Users</h1>
+	<img src="img5.jpg" alt="home">
+
+	<script src="../jquery-2.1.1.js"></script>
+	<script src="handlebars-v1.3.0.js"></script>
+	
+	<ul class=tweet>
+		
+		<script id="template" type="text/x-handlebars-template">
+		{{#each this}}
+		<img src={{thumbnail}} class=user />
+		<li class=inform>
+			
+			<h2>{{auther}} {{#if age}}<span>-{{age}}</span>{{/if}}</h2>
+			<p>{{tweet}}</p>
+
+			{{#if quote}}
+			<h4>{{quote}}</h4>
+			{{else}}
+			<h4>Auther does not have a quote.</h4>
+			{{/if}}
+
+		</li>
+		{{/each}}
+		</script>
+
+	</ul>
+		
+
+	<script type="text/javascript">
+		(function() {
+			var post = [
+			{
+				thumbnail: 'user1.jpg',
+				auther: 'Chimon Z',
+				tweet: 'Never ever,ever,ever,ever give up.',
+				age: '25',
+				quote: 'Fashion passes,style remains.'
+			},
+			{
+				thumbnail: 'user2.jpg',
+				auther: 'john Doe',
+				tweet: 'Never ever,ever,ever,ever give up.'
+			},
+			{
+				thumbnail: 'user3.jpg',
+				auther: 'john Doe2',
+				tweet: 'Never ever,ever,ever,ever give up.',
+				age: '29',
+				quote: 'Just Do It.'
+			}
+		];
+
+			var template = Handlebars.compile( $('#template').html() );
+
+			$('ul.tweet').append( template(post) );
+
+		})();
+
+	</script>
+</body>
+</html>
