@@ -6,10 +6,12 @@
 	<link rel="stylesheet" href="creation.css">
 </head>
 <body>
-	<button id="click">Click Me</button>
-	<button id="reset">Reset</button>
+	<div class="func-button">
+		<button id="click">Click Me</button>
+		<button id="reset">Reset</button>
+	</div>
+	
 	<div class="box"></div>
-	<div class="box2"></div>
 
 	<script src="../jquery-2.1.1.js"></script>
 
@@ -19,60 +21,39 @@
 
 	$.fn.move = function( speed, easing, callback ) {
 		return $(this)
-				.slideDown(300)
+				.fadeIn(1000)
 				.animate({
-				top: "+=200",
-				left: "+=550",
+				'top': '+=200',
+				'left': '+=550',
 			},2000)
 				.addClass('circle')
 				.delay(1000)
-				.fadeOut(1000,function(){
-					$('.box2').fadeIn(1000)
+				.slideUp(300,function(){
+					$(this).slideDown(300)
 					.animate({
 					top: "-=200"
 				},2000)
+					.addClass('color')
 					.animate({
 					left: "-=550"
 				},2000)
-					.slideUp(300);
-				});
-				
-		};
-
-
-
-		$.fn.reset = function( speed, easing, callback ) {
-		return $(this)
-				.animate({
-				top: "-=200",
-				left: "-=550",
-			},10)
-				.fadeOut(10,function(){
-					$('.box2')
-					.animate({
-					top: "+=200"
-				},10)
-					.animate({
-					left: "+=550"
-				},10)
-					.slideUp(10);
+					.fadeOut(1000);
 				});
 				
 		};
 
 	$('#click').on('click', function() {
 		var $this = $(this);
-		$this.attr('disabled','disabled').siblings('button').removeAttr('disabled');
+		$this.attr('disabled','disabled');
 		box.move();
 		
 	});
 
 	$('#reset').on('click', function() {
 		var $this = $(this);
-		$this.attr('disabled','disabled').siblings('button').removeAttr('disabled');
-		box.reset();
-		
+		$this.siblings('button').removeAttr('disabled');	
 	});
+
 	})();
 
 	</script>

@@ -6,32 +6,34 @@ body {
 .box {
 	width: 100px;
 	height: 100px;
+	background-color: red;
 	position: absolute;
 	top: 200px;
 	left: 300px;
 	display: none;
 }
 
-.box2 {
-	width: 100px;
-	height: 100px;
-	background-color: red;
-	position: absolute;
-	top: 400px;
-	left: 850px;
-	display: none;
+.color {
+	background-color: yellow;	
 }
-
 .circle {
-	background-color: yellow;
+	-webkit-transition: border-radius 3s;
+	-o-transition: border-radius 3s;
+	transition: border-radius 3s;
 	border-radius: 50%;
 }
 
-button {
-	position: relative;
-	margin: 100px 0 0 300px;
-	padding: 1em;
-	border-radius: 10px;
+.func-button {
+	top: 100px;
+	left: 400px;
+	position: absolute;
+	text-align: center;
+}
+
+.func-button button {
 	font-size: 1.5em;
+	padding: 1em;
+	margin-left: 2em;
+	border-radius: 10px;
 	cursor: pointer;
 }
