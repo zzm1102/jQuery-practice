@@ -1,9 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="contact.css">
-	<script src="../jquery-2.1.1.js"></script>
 </head>
 <body>
 	<article>
@@ -15,66 +15,67 @@
 		Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hello from JavaScript. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 	</p>
 	</article>
-	
 
 	<div class="contact">
 		<h2>Contact Me</h2>
-		<form action="#">
+		<form action="function.php" method="post" >
 			<label>
-			Name:
-			<input type="text" name="name">
+				Name:
+				<input type="text" name="name">
 			</label>
 
 			<label>
 				E-mail:
-				<input type="text" name="e-mail" placeholder="name@domain.com">
+				<input type="text" name="mail" placeholder="name@domain.com">
 			</label>
 
 			<label>
-				What's up:
-				<textarea cols=30 rows=10></textarea>
+				What's up?
+				<textarea name="sth" id="" cols="30" rows="10" name="words"></textarea>
 			</label>
+
+			<button>Submit</button>
 		</form>
-		<input type="submit" name="submit" value="submit">
 	</div>
-	
 
-	<script>
-	(function() {
-		$('html').addClass('js');
-		var contactForm = {
-			container: $('.contact'),
-			init: function() {
-				$('<button></button>',{
-					text:'Contact me'
-				}).insertAfter('article:first')
-				.on('click',this.show);
-			},
+<script src="../jquery-2.1.1.js"></script>
 
-			show: function() {
-				var cf = contactForm,
-				    container = cf.container;
-				if ( container.is(':hidden') ) {
-					contactForm.close.call(container);
-				    $('.contact').slideToggle(300);
-				}
-			},
+<script>
+(function() {
+	$('html').addClass('js');
+	var container = $('div.contact');
 
-			close: function() {
+	var cForm = {		
+		init: function() {
+			$('<button></button>',{
+				text: 'Contact Me'
+			}).insertAfter('article:first')
+				.on('click', this.show );
+		},
+				
+		show: function() {
+			if ( container.is(':hidden') ) {    //语法结构！
+			cForm.close.call(container);
+			container.slideToggle(300);
+			};			
+						
+		},
 
-				if ( contactForm.container.find('span.close').length ) return;
+		close: function() {
+			if (container.find('.close').length ) return;
+			$('<span class=close>X</span>').prependTo(this) 
+			//为什么不能直接 prependTo(container)？
+			.on('click', function() {
+				container.slideToggle(300);
+			});
 
-				$('<span class=close>X</span>')
-				.prependTo(this)
-				.on('click',function(){
-					contactForm.container.slideToggle(300);
-				});
-			}
-		};
+		}
+	}
+cForm.init();
 
-		contactForm.init()
-	})();
+})();
 
-	</script>
+</script>
+
 </body>
 </html>
