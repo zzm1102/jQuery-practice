@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Painting</title>
+	<link rel="stylesheet" href="painting.css">
+	<link rel="stylesheet" href="../normalize.css">
+</head>
+<body>
+	<h1>Pick a color and paint the canvas</h1>
+
+	<div class="work_space">
+		<div class="paint_colors">
+			<div class="color" id="yellow"></div>
+			<div class="color" id="red"></div>
+			<div class="color" id="blue"></div>
+			<div class="color" id="white"></div>
+		</div>
+
+		<div class="paper">
+			<div class="row1">
+				<div class="cell cell1" id="cell1-1"></div>
+				<div class="cell cell1" id="cell1-2"></div>
+				<div class="cell cell1" id="cell1-3"></div>
+				<div class="cell cell1" id="cell1-4"></div>
+			</div>
+
+			<div class="row2">
+				<div class="cell cell2" id="cell2-1"></div>
+				<div class="cell cell2" id="cell2-2"></div>
+				<div class="cell cell2" id="cell2-3"></div>
+				<div class="cell cell2" id="cell2-4"></div>
+			</div>
+
+			<div class="row3">
+				<div class="cell cell3" id="cell3-1"></div>
+				<div class="cell cell3" id="cell3-2"></div>
+				<div class="cell cell3" id="cell3-3"></div>
+				<div class="cell cell3" id="cell3-4"></div>
+			</div>
+
+			<div class="row4">
+				<div class="cell cell4" id="cell4-1"></div>
+				<div class="cell cell4" id="cell4-2"></div>
+				<div class="cell cell4" id="cell4-3"></div>
+				<div class="cell cell4" id="cell4-4"></div>
+			</div>
+		</div>
+	</div>
+
+
+<script src="../jquery-2.1.1.js"></script>
+
+<script>
+	(function() {
+		$('div.color').on('click', function() {
+			getColor = $(this).css('background-color');
+		});
+
+		$('div.cell').on('click', function() {
+			$(this).css('background-color', getColor);
+		});
+		
+	})();
+</script>
+	
+</body>
+</html>

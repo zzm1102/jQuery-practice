@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Day Tracker</title>
+	<link rel="stylesheet" href="day-tracker.css">
+	<link rel="stylesheet" href="../normalize.css">
+</head>
+<body>
+	<div class="wrap">
+
+		<div class="week">
+	        <div class="tab" id="0">
+				<h3 class="day">Sun</h3>
+			</div>
+			<div class="tab" id="1">
+				<h3 class="day">Mon</h3>
+			</div>
+			<div class="tab" id="2">
+				<h3 class="day">Tue</h3>
+			</div>
+			<div class="tab" id="3">
+				<h3 class="day">Wed</h3>
+			</div>
+			<div class="tab" id="4">
+				<h3 class="day">Thu</h3>
+			</div>
+			<div class="tab" id="5">
+				<h3 class="day">Fri</h3>
+			</div>
+			<div class="tab" id="6">
+				<h3 class="day">Sat</h3>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="message">
+			<p id="msg0">
+				Sunday Joke:<br><br>
+				I asked God for a bike, but I know God doesn't work that way. So I stole a bike and asked for forgiveness. 
+			</p>
+			<p id="msg1">
+				Monday Joke:<br><br>
+				I want to die peacefully in my sleep, like my grandfather.. Not screaming and yelling like the passengers in his car.
+			</p>
+			<p id="msg2">
+				Tuesday Joke:<br><br>
+				The early bird might get the worm, but the second mouse gets the cheese.
+			</p>
+			<p id="msg3">
+				Wednesday Joke:<br><br>
+				Do not argue with an idiot. He will drag you down to his level and beat you with experience.
+			</p>
+			<p id="msg4">
+				Thursday Joke:<br><br>
+				Light travels faster than sound. This is why some people appear bright until you hear them speak. 
+			</p>
+			<p id="msg5">
+				Friday Joke:<br><br>
+				If God is watching us, the least we can do is be entertaining.
+			</p>
+			<p id="msg6">
+				Saturday Joke:<br><br>
+				A bus station is where a bus stops. A train station is where a train stops. On my desk, I have a work station.. 
+			</p>
+		</div>
+
+	</div>
+
+	<script src="../jquery-2.1.1.js"></script>
+
+	<script>
+
+	(function() {
+		var date = new Date(),
+			day = date.getDay();
+
+		$( '#' + day ).attr('id', 'today');
+		$( '#msg'+ day ).show().appendTo('div.message');	
+
+	})();
+
+	</script>
+</body>
+</html>

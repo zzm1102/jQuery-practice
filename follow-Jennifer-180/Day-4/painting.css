@@ -1,0 +1,120 @@
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #aaa;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+	margin: 40px auto 30px;
+	font-size: 2.5em;
+	color: #333;
+	text-shadow: -1px -1px 0 rgba(255,255,255,0.5),
+			      1px 1px 0 rgba(0,0,0,0.3);
+}
+
+.work_space {
+	width: 960px;
+	height: 600px;
+	background-color: #fff;
+	margin: 30px auto;
+	box-shadow: 0 0 10px black;
+	background-color: #daebb7;
+}
+
+.paint_colors {
+	float: left;
+	margin: 40px 40px auto;
+}
+
+.color {
+	height: 50px;
+	width: 50px;
+	border: 1px solid #aaa;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+#yellow {
+	background-color: #ffec00;
+}
+
+#red {
+	background-color: #cc0000;
+}
+
+#blue {
+	background-color: #0000cc;
+}
+
+#white {
+	background-color: #fff;
+}
+
+.paper {
+	background-color: #fff;
+	float: right;
+	margin: 40px 40px auto;
+	border: 1px solid #000;
+	cursor: pointer;
+}
+
+.row1 {
+	height: 80px;
+	border-bottom: 10px solid #000;
+}
+
+.row2 {
+	height: 130px;
+	border-bottom: 10px solid #000;
+}
+
+.row3 {
+	height: 200px;
+	border-bottom: 10px solid #000;
+}
+
+.row4 {
+	height: 70px;
+}
+
+.cell {
+	float: left;
+	border-right: 10px solid #000;
+}
+
+.cell1 {
+	height: 80px;
+}
+
+.cell2 {
+	height: 130px;
+}
+
+.cell3 {
+	height: 200px;
+}
+
+.cell4 {
+	height: 70px;
+}
+
+#cell1-1, #cell2-1, #cell3-1, #cell4-1 {
+	width: 130px;
+}
+
+#cell1-2, #cell2-2, #cell3-2, #cell4-2 {
+	width: 300px;
+}
+
+#cell1-3, #cell2-3, #cell3-3, #cell4-3 {
+	width: 90px;
+}
+
+#cell1-4, #cell2-4, #cell3-4, #cell4-4 {
+	width: 180px;
+	border-right: none;
+}
+
