@@ -1,0 +1,96 @@
+html,body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	position: relative;
+	z-index: 10;
+}
+
+h1 {
+	margin: 1em auto 0;
+	font-size: 3.5em;
+}
+
+h1, h2 {
+	text-align: center;
+	color: #8f8888;
+	text-shadow: 1px 3px 3px rgba(0,0,0,.2);
+}
+
+h2 {
+	margin: 35em auto 10em;
+}
+
+.wrap {
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+	background-color: #e3e3e3;
+	color: #fff;
+	font-size: 2em;
+	display: inline-block;
+	position: absolute;
+	z-index: 0;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.2),
+				4px 4px 2px rgba(0,0,0,.2),
+				6px 6px 2px rgba(0,0,0,.2),
+				8px 8px 2px rgba(0,0,0,.2),
+				10px 10px 2px rgba(0,0,0,.2);
+}
+
+#box1 {
+	top: 190px;
+	left: -30px;
+	background-color: #e3e3e3;
+}
+
+#box2 {
+	top: 40px;
+	left: 110px;
+	background-color: #ef56fe;
+}
+
+#box3 {
+	top: 180px;
+	left: 250px;
+	background-color: #45cfee;
+}
+
+#box4 {
+	top: 320px;
+	left: 120px;
+	background-color: #456443;
+}
+
+#box5 {
+	top: 100px;
+	left: 420px;
+	background-color: #5ffc40;
+}
+
+#box6 {
+	top: 350px;
+	left: 390px;
+	background-color: #ecfe3e;
+}
+
+#box7 {
+	top: 270px;
+	left: 670px;
+	background-color: #4e5efe;
+}
+
+#box8 {
+	top: 15px;
+	left: 590px;
+	background-color: #c7fecc;
+}
+
+#box9 {
+	top: 110px;
+	left: 770px;
+	background-color: #39eecc;
+}
