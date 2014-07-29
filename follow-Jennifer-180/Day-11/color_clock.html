@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Color Clock</title>
+	<link rel="stylesheet" href="color_clock.css">
+	<!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="wrap">
+
+	<div class="time_part">
+		<h2 class="current_time">The current time is</h2>
+		<div class="clock ticker">
+			<div class="current" id="cur_hour"></div>
+			<span class="colon">:</span>
+			<div class="current" id="cur_min"></div>
+			<span class="colon">:</span>
+			<div class="current" id="cur_sec"></div>
+		</div>
+	</div>
+
+	<div class="color_part">
+		<h2 class="current_color">The current color is</h2>
+		<div class="color ticker">
+			<div class="current" id="cur_color"></div>
+		</div>
+	</div>
+
+</div>
+
+
+<script src="../jquery-2.1.1.js"></script>
+<script src="color_clock.js"></script>
+
+</body>
+</html>
