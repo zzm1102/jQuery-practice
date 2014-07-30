@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock Paper Scissors</title>
+	<link rel="stylesheet" href="rock_paper_scissors.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="container computer_side">
+			<h3>Computer</h3>
+			<div class="hand_container left_hand">
+				<img src="imgs/left_fist.png" alt="left-hand" class="fist left hand">
+				<img src="imgs/rock.png" alt="rock" class="left rock">
+				<img src="imgs/paper.png" alt="paper" class="left paper">
+				<img src="imgs/scissors.png" alt="scissors" class="left scissors">
+			</div>
+		</div>
+
+		<div class="score">Choose your weapon</div>
+
+		<div class="container your_side">
+			<h3>You</h3>
+			<div class="hand_container right_hand">
+				<img src="imgs/right_fist.png" alt="right-hand" class="fist right hand">
+				<img src="imgs/rock.png" alt="rock" class="right rock">
+				<img src="imgs/paper.png" alt="paper" class="right paper">
+				<img src="imgs/scissors.png" alt="scissors" class="right scissors">
+			</div>
+			<div class="btn_container">
+				<div class="button" data-file='rock'>Rock</div>
+				<div class="button" data-file='paper'>Paper</div>
+				<div class="button" data-file='scissors'>Scissors</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+	
+	<script src="../jquery-2.1.1.js"></script>
+	<script src="rock_paper_scissors.js"></script>
+</body>
+</html>
